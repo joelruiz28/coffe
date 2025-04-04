@@ -1,10 +1,11 @@
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
 export default defineConfig({
-  root: './',
-  base: '/',  // Esto asegura que los archivos estáticos se sirvan correctamente
+  base: '/',  // Ajusta esto si tu proyecto está en una subcarpeta
+  plugins: [react()],
   build: {
     outDir: 'dist',
-    emptyOutDir: true,
-  },
-  plugins: [react()],
+    emptyOutDir: true
+  }
 });
-
