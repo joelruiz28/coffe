@@ -1,12 +1,10 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/',
+  base: './', // Si usas un entorno de subdirectorio como Vercel
   build: {
     outDir: 'dist',
     emptyOutDir: true,
-    rollupOptions: {
-      input: 'src/main.jsx',
-    },
   },
 });
+
